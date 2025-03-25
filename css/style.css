@@ -2,3 +2,7 @@
 @import url(main-hero.css);
 @import url(global.css);
 @import url(about.css);
+
+.iframe {
+  width: 1200px;
+}

@@ -14,27 +14,57 @@
   background-attachment: fixed;
   height: 800px;
 
-  & p {
-    max-width: 1200px;
-    color: var(--cinza);
-    font: 500 1.25rem var(--text);
-    text-align: justify;
-    padding: 1rem;
-    color: var(--cinzaClaro);
+  
+  & .aboutText {
+    position:relative;
     background: radial-gradient(circle, rgba(0,0,0,.5) ,  rgba(0,0,0,0.1));
+    padding: 1rem;
     border-radius: 5px;
+    max-width: 1200px;
   }
- 
+
   & .subtitulo {
     font: 600 4rem var(--subtitulos);
     color: var(--branco);
     padding: 1rem;
   }
 
-  & .none {
-    display: none;
+  & p {
+    color: var(--cinza);
+    font: 500 1.25rem var(--text);
+    text-align: justify;
+    color: var(--cinzaClaro);
+    line-height: 1.5;
   }
 
+  & .block {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  & .none {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+  }
+  
+  & .none.active {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+  }
+  
   & .span {
+    position: absolute;
+    right: -10px;
+    background: linear-gradient(135deg, chartreuse, green);
+    color: var(--preto);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
   }
 }
