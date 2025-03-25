@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.125rem 0;
+  background: chartreuse;
+
+  & h1 {
+    font-family: var(--h1);
+    color: var(--cinza);
+    font-weight: 700;
+  }
+
+  & div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & img {
+      width: 38px;
+    }
+  }
+
+  & ul {
+    display: flex;
+    gap: 3rem;
+
+    & li a {
+      color: var(--cinza);
+      font: 500 1.5rem var(--text);
+    }
+  }
+}

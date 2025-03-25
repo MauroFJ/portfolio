@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+:root {
+  --h1: 'Inter', sans-serif;
+  --text: 'Poppins', sans-serif;
+  --subtitulos: 'Boldonse', sans-serif;
+  --cinza: #4d4444;
+  --cinzaClaro: #cfcece;
+  --branco: #f5f5f5;
+}
+
+h2 {
+  font-family: 'Boldonse', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

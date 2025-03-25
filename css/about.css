@@ -1,0 +1,40 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  align-items: center;
+  padding: 100px;
+  position: relative;
+  margin-top: 200px;
+
+  background-image: url(../assets/paisagem1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2000px;
+  background-attachment: fixed;
+  height: 800px;
+
+  & p {
+    max-width: 1200px;
+    color: var(--cinza);
+    font: 500 1.25rem var(--text);
+    text-align: justify;
+    padding: 1rem;
+    color: var(--cinzaClaro);
+    background: radial-gradient(circle, rgba(0,0,0,.5) ,  rgba(0,0,0,0.1));
+    border-radius: 5px;
+  }
+ 
+  & .subtitulo {
+    font: 600 4rem var(--subtitulos);
+    color: var(--branco);
+    padding: 1rem;
+  }
+
+  & .none {
+    display: none;
+  }
+
+  & .span {
+  }
+}
