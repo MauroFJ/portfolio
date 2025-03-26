@@ -1,12 +1,13 @@
 const span = document.querySelector('.span');
 
 function showText() {
-  this.previousElementSibling.classList.toggle('active');
-  
-  if (this.classList.contains('active')) {
-    this.innerHTML = 'Ver mais...'
+  const textElement = this.previousElementSibling;
+  textElement.classList.toggle('active');
+
+  if (textElement.classList.contains('active')) {
+    this.innerHTML = 'Ver menos...';
   } else {
-    this.innerHTML = 'Ver menos...'
+    this.innerHTML = 'Ver mais...';
   }
 }
 
