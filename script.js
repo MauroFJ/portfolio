@@ -1,4 +1,5 @@
 const span = document.querySelector('.span');
+const btn = document.querySelector('.btn');
 
 function showText() {
   const textElement = this.previousElementSibling;
@@ -11,4 +12,14 @@ function showText() {
   }
 }
 
+function showPreview () {
+  const preview = document.querySelector('iframe');
+
+  preview.classList.add('active');
+  this.classList.add('remove')
+
+}
+
 span.addEventListener('click', showText);
+btn.addEventListener('click', showPreview);
+

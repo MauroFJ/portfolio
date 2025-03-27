@@ -5,44 +5,109 @@
 @import url(projects.css);
 @import url(tecnology.css);
 
+.image {
+  display: flex;
+
+  .projeto1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 100px;
+  }
+
+  .projeto2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  & iframe {
+    filter: blur(10px);
+
+    display: flex;
+    width: 600px;
+    height: 600px;
+  }
+
+  & .active {
+    filter: blur(0px);
+  }
+}
+
 
 .projects {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  flex-direction: column;
   position: relative;
 
-}
+  & img {
+    width: 20px;
+  }
 
-.teste {
-  filter: blur(50px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: aqua;
-  width: 300px;
-  height: 300px;
-}
+  & .prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 200px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: aqua;
+    z-index: 2000;
 
-.teste:hover {
-  filter: blur(0px);
-  width: 500px;
-  height: 500px;
-}
+  }
 
-.teste > div {
-  background-color: red;
-  width: 400px;
-  height: 400px;
-}
+  & .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 200px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: aqua;
+    z-index: 2000;
+  }
 
-.absolute {
-  position: absolute;
-  top: 200px;
+  & .image {
+    display: flex;
+    padding: 100px 50px;
 
-}
+    & iframe {
+      width: 1000px;
+      height: 600px;
+      border: 10px solid black;
+    }
 
-.absolute:hover {
-  left: 2000px;
+    & .active {
+      filter: blur(0px);
+    }
+  }
+  & .div-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .btn {
+      background-color: aqua;
+      color: black;
+      padding: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+  
+  & .active {
+    filter: blur(0px);
+  }
+
+  & .remove {
+    display: none;
+  }
 }

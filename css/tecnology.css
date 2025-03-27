@@ -49,7 +49,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+        cursor: pointer;
 
         & img {
           width: 60%;
@@ -58,7 +59,7 @@
         }
       }
       & .hex:hover {
-        transform: scale(1.1);
+        transform: rotateY(180deg);
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
       }
       & .hex.medio img{
