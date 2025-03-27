@@ -9,7 +9,9 @@
   display: flex;
   transition: transform 0.5s ease-in-out;
 
-
+  & .projetos {
+    display: flex;
+  }
 
   & .projeto1 {
     display: flex;
