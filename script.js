@@ -1,5 +1,10 @@
 const span = document.querySelector('.span');
 const btn = document.querySelector('.btn');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+const proj2 = document.querySelector('.projeto2');
+
+
 
 function showText() {
   const textElement = this.previousElementSibling;
@@ -20,6 +25,26 @@ function showPreview () {
 
 }
 
+function nextSlide() {
+  const slider = document.querySelector('.image');
+  const posicao = proj2.getBoundingClientRect();
+
+  const larguraTela = window.innerWidth;
+  const margin = (posicao.left) - (window.innerWidth) / 2 + (posicao.width / 2);;
+  console.log(posicao.left)
+  console.log(posicao.width)
+
+  slider.style.transform = `translate3d(${-margin}px,0px,0px)`
+}
+
+function prevSlide () {
+
+}
+
 span.addEventListener('click', showText);
 btn.addEventListener('click', showPreview);
+next.addEventListener('click', nextSlide)
+
+prev.addEventListener('click', prevSlide)
+
 
