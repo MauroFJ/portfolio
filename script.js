@@ -4,6 +4,19 @@ const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 const proj2 = document.querySelector('.projeto2');
 
+const projetos = document.querySelectorAll('.projetos')
+
+const teste = Array.from(projetos)
+console.log(teste)
+
+function teste1(item,index) {
+}
+
+teste.forEach((item,index) => {
+  item.addEventListener('click', teste1)
+  console.log(item,index)
+
+})
 
 
 function showText() {
@@ -43,7 +56,8 @@ function prevSlide () {
 
 span.addEventListener('click', showText);
 btn.addEventListener('click', showPreview);
-next.addEventListener('click', nextSlide)
+next.addEventListener('click', nextSlide);
+
 prev.addEventListener('click', prevSlide)
 
 
