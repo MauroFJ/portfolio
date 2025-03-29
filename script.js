@@ -19,10 +19,6 @@ class Slide {
     const offset = viewportCenter - slideCenter;
 
     this.slider.style.transform = `translate3d(${offset}px, 0, 0)`;
-
-    console.log(
-      `Slide ${this.currentIndex}: slideCenter=${slideCenter}, viewportCenter=${viewportCenter}, offset=${offset}`,
-    );
   }
 
   nextSlide() {
@@ -64,45 +60,5 @@ function showPreview() {
   this.classList.add('remove');
 }
 
-// function nextSlide() {
-//   const slider = document.querySelector('.image');
-//   const posicao = proj2.getBoundingClientRect();
-
-//   const larguraTela = window.innerWidth;
-//   const margin = (posicao.left) - (larguraTela) / 2 + (posicao.width / 2);;
-
-//   slider.style.transform = `translate3d(${-margin}px,0px,0px)`
-// }
-
-function nextSlide() {
-  const slider = document.querySelector('.image');
-  // const posicao = proj2.getBoundingClientRect();
-  posicao = projetosArray;
-  posicao.forEach((item, index) => {
-    item.getBoundingClientRect();
-  });
-  console.log(posicao.left);
-
-  const larguraTela = window.innerWidth;
-  const margin = posicao.left - larguraTela / 2 + posicao.width / 2;
-
-  slider.style.transform = `translate3d(${-margin}px,0px,0px)`;
-}
-
-function prevSlide() {
-  body.style.background = 'aqua';
-
-  projetosArray[0].classList.toggle('active');
-
-  const slider = document.querySelector('.image');
-  slider.style.transform = `translate3d(0px,0px,0px)`;
-
-  console.log(projetosArray[0]);
-  console.log('teste');
-}
-
 span.addEventListener('click', showText);
 btn.addEventListener('click', showPreview);
-next.addEventListener('click', nextSlide);
-
-prev.addEventListener('click', prevSlide);

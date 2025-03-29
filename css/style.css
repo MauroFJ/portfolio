@@ -18,10 +18,17 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 100px 0 0;
   }
 
   & .projeto2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 100px;
+  }
+
+  & .projeto3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +47,6 @@
     filter: blur(0px);
   }
 }
-
 
 .projects {
   display: flex;
@@ -63,7 +69,7 @@
     border-radius: 50%;
     background-color: aqua;
     z-index: 2000;
-
+    cursor: pointer;
   }
 
   & .next {
@@ -77,6 +83,7 @@
     border-radius: 50%;
     background-color: aqua;
     z-index: 2000;
+    cursor: pointer;
   }
 
   & .image {
