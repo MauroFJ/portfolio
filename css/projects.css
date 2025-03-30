@@ -7,9 +7,9 @@
 
   & .subtitulo {
     display: flex;
-    background: radial-gradient(circle,chartreuse ,rgba(255,255,255,0.2)70%);
     justify-content: center;
-    font: 600 4rem var(--subtitulos);
+    background: radial-gradient(circle,chartreuse ,rgba(255,255,255,0.2)70%);
+    font: 500 4rem var(--subtitulos);
     color: var(--branco);
     padding: 1rem;
   }

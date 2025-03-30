@@ -67,4 +67,8 @@
     padding: 10px;
     cursor: pointer;
   }
+  & .span:hover {
+    color: var(--branco);
+    transition: .2s;
+  }
 }
