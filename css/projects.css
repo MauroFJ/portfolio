@@ -1,0 +1,96 @@
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  & img {
+    width: 30px;
+  }
+
+  & .prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 90px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, chartreuse 40%, green);
+    z-index: 2000;
+    cursor: pointer;
+  }
+
+  & .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 90px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(270deg, chartreuse 40%, green);
+    z-index: 2000;
+    cursor: pointer;
+  }
+
+  & .image {
+    display: flex;
+    padding: 100px 150px;
+    transition: transform 0.5s ease-in-out;
+
+    & .projetos {
+      display: flex;
+      gap: 140px;
+    }
+
+    & .projeto1, & .projeto2, & .projeto3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    & iframe {
+      filter: blur(10px);
+      display: flex;
+      width: 600px;
+      height: 600px;
+    }
+
+    & iframe {
+      display: flex;
+      width: 1000px;
+      height: 600px;
+      border: 10px solid black;
+      filter: blur(10px);
+    }
+
+    & .allProj.active iframe {
+      filter: blur(0px);
+    }
+  }
+
+  & .div-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .btn {
+      background: linear-gradient(135deg, green,chartreuse 40%, green);
+      color: var(--branco);
+      text-shadow: 2px 1px 2px black;
+      font-weight: bold;
+      padding: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+
+  & .remove {
+    display: none;
+  }
+}
