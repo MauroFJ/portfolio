@@ -28,6 +28,12 @@
     & li a {
       color: var(--cinza);
       font: 500 1.5rem var(--text);
+      padding: 8px;
+    }
+
+    & li a:hover {
+      color: var(--branco);
+      transition: .3s;
     }
   }
 }
