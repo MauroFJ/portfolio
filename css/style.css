@@ -5,49 +5,37 @@
 @import url(projects.css);
 @import url(tecnology.css);
 
+/* Define a classe .image */
 .image {
   display: flex;
   transition: transform 0.5s ease-in-out;
 
   & .projetos {
     display: flex;
+    gap: 140px;
   }
 
-  & .projeto1 {
+  & .projeto1, & .projeto2, & .projeto3 {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
 
-  & .projeto2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 100px;
-  }
-
-  & .projeto3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
   & iframe {
     filter: blur(10px);
-
     display: flex;
     width: 600px;
     height: 600px;
   }
 
-  & .active {
-    filter: blur(0px);
+  /* A classe .active deve ser aplicada diretamente nas divs .allProj */
+  & .allProj.active iframe {
+    filter: blur(0px); /* Remover o blur da div específica */
   }
 }
 
+/* Estilos de .projects */
 .projects {
   display: flex;
   justify-content: center;
@@ -96,10 +84,12 @@
       border: 10px solid black;
     }
 
-    & .active {
+    /* Classe active aplicada diretamente às divs .allProj */
+    & .allProj.active iframe {
       filter: blur(0px);
     }
   }
+
   & .div-btn {
     position: absolute;
     display: flex;
@@ -113,10 +103,6 @@
       font-size: 24px;
       cursor: pointer;
     }
-  }
-  
-  & .active {
-    filter: blur(0px);
   }
 
   & .remove {

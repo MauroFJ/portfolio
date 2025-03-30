@@ -1,6 +1,3 @@
-const span = document.querySelector('.span');
-const btn = document.querySelector('.btn');
-
 class Slide {
   constructor(slider, next, prev) {
     this.slider = document.querySelector(slider);
@@ -42,23 +39,42 @@ const slide = new Slide('.image', '.next', '.prev');
 slide.centerSlide();
 slide.onClick();
 
-function showText() {
-  const textElement = this.previousElementSibling;
-  textElement.classList.toggle('active');
+class BlurAndPreview {
+  constructor(span, button, slider) {
+    this.span = document.querySelector(span);
+    this.button = button; // Alterado para pegar todos os botões, não apenas um
+    this.slider = document.querySelector(slider);
+    this.slides = this.slider.querySelectorAll('.allProj');
+  }
 
-  if (textElement.classList.contains('active')) {
-    this.innerHTML = 'Ver menos...';
-  } else {
-    this.innerHTML = 'Ver mais...';
+  showText() {
+    const textElement = this.span.previousElementSibling;
+
+    textElement.classList.toggle('active');
+
+    if (textElement.classList.contains('active')) {
+      this.span.innerHTML = 'Ver menos...';
+    } else {
+      this.span.innerHTML = 'Ver mais...';
+    }
+  }
+
+  showPreview(event) {
+    event.target.classList.add('remove');
+
+    const clickedSlide = event.target.closest('.allProj');
+    clickedSlide.classList.add('active');
+  }
+
+  addEvents() {
+    this.span.addEventListener('click', this.showText.bind(this));
+
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach((button) => {
+      button.addEventListener('click', this.showPreview.bind(this));
+    });
   }
 }
 
-function showPreview() {
-  const preview = document.querySelector('iframe');
-
-  preview.classList.add('active');
-  this.classList.add('remove');
-}
-
-span.addEventListener('click', showText);
-btn.addEventListener('click', showPreview);
+const blurAndPreview = new BlurAndPreview('.span', '.btn', '.image');
+blurAndPreview.addEvents();
