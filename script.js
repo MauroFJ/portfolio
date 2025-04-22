@@ -42,7 +42,7 @@ slide.onClick();
 class BlurAndPreview {
   constructor(span, button, slider) {
     this.span = document.querySelector(span);
-    this.button = button; // Alterado para pegar todos os botões, não apenas um
+    this.button = button;
     this.slider = document.querySelector(slider);
     this.slides = this.slider.querySelectorAll('.allProj');
   }
