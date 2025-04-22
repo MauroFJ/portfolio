@@ -3,6 +3,8 @@
   justify-content: space-around;
   align-items: center;
   padding: 60px 0;
+  gap: 40px;
+
 
   & img {
     width: 400px;
@@ -29,5 +31,54 @@
     background: linear-gradient(to bottom, rgb(156, 226, 85), #6D9FDA );
     border-radius: 50%;
     padding: 10px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-hero {
+    & .tittle {
+      & h1 {
+        max-width: 500px;
+        font-size: 3.5rem;
+      }
+      & p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main-hero {
+    & .gradient{
+      padding: 6px;
+      & img {
+        background-color: aqua;
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .main-hero {
+    flex-direction: column;
+    & .tittle {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main-hero {
+    & .tittle {
+      & h1 {
+        font-size: 2.5rem;
+      }
+      & p {
+        font-size: 1rem;
+      }
+    }
   }
 }
