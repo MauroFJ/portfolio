@@ -78,3 +78,9 @@ class BlurAndPreview {
 
 const blurAndPreview = new BlurAndPreview('.span', '.btn', '.image');
 blurAndPreview.addEvents();
+
+const menu = document.querySelector('.menu-toggle')
+
+menu.addEventListener('click', function(){
+  this.nextElementSibling.classList.toggle('active');
+})
