@@ -44,3 +44,18 @@
   margin-bottom: 20px;
   background: radial-gradient(circle, #6b6a6a 25%, #fff 75%);
 }
+
+@media (max-width: 1000px) {
+  #contato {
+    & .subtitulo {
+      font-size: 2.5rem;
+    }
+  }
+  .contato {
+    & .infos {
+      & p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
