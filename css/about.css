@@ -96,3 +96,21 @@
     }
   }
 }
+
+
+@media (max-width: 550px) {
+  .main-hero {
+    & h1 {
+      padding: 20px;
+    }
+  }
+  .about {
+    background-image: url('');
+    background: linear-gradient(to bottom, green, rgb(156, 226, 85) );
+    & .aboutText {
+      & p {
+        color: var(--branco);
+      }
+    }
+  }
+}
