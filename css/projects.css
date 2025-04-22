@@ -96,6 +96,7 @@
 
     & .allProj.active iframe {
       filter: blur(0px);
+      transition: .7s;
     }
   }
 
@@ -118,5 +119,56 @@
 
   & .remove {
     display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .projects {
+    & .projetos {
+      & iframe {
+        width: 700px;
+        height: 450px;
+      }
+    }
+    & .subtitulo {
+      font-size: 2rem;
+    background: radial-gradient(circle,chartreuse ,rgba(255,255,255,0.2));
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .projects {
+    & .next{
+      right: 10px;
+    }
+    & .prev {
+      left: 10px;
+    }
+  }
+
+}
+
+@media (max-width: 500px) {
+  .projects {
+    & .projetos {
+      & iframe {
+        width: 300px;
+        height: 350px;
+      }
+      & .projeto1, & .projeto2, & .projeto3 {
+        & .links {
+          margin-top: 40px;
+          padding: 10px;
+          & a {
+            padding: 10px;
+            font-size: 16px;
+          }
+        }
+       }
+    }
+    & .subtitulo {
+      font-size: 1.5rem;
+    }
   }
 }
