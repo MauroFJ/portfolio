@@ -42,7 +42,7 @@
   height: 3px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background: radial-gradient(circle, #6b6a6a 25%, #fff 75%);
+  background: radial-gradient(circle, #6b6a6a 25%, #f4f4f4 75%);
 }
 
 @media (max-width: 1000px) {
