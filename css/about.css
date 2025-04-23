@@ -8,6 +8,7 @@
   margin-top: 200px;
 
   background-image: url(../assets/backgrounds/paisagem1.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1800px;
@@ -59,17 +60,18 @@
   & .span {
     position: absolute;
     right: -10px;
-    background: linear-gradient(135deg, chartreuse, green);
-    color: var(--preto);
+    background: linear-gradient(0deg, #4A90E2, #4A9);
+    border-radius: 0 0 20px 20px;
+    color: #2e2e2e;
     font-size: 18px;
     font-weight: 600;
     margin: 10px;
     padding: 10px;
     cursor: pointer;
+    transition: .2s;
   }
   & .span:hover {
-    color: var(--branco);
-    transition: .2s;
+    color: var(--preto);
   }
 }
 
@@ -101,7 +103,10 @@
 @media (max-width: 550px) {
   .about {
     background-image: url('');
-    background: linear-gradient(to bottom, green, rgb(156, 226, 85) );
+    background: linear-gradient(to bottom, #4A9, #4A90E2 );
+    & .span {
+      background: #4A9;
+    }
     & .aboutText {
       & p {
         color: var(--branco);

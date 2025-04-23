@@ -105,8 +105,9 @@
 
 @media (max-width: 550px) {
   .tecnology {
+  margin-top: 50px;
   background-image: url('');
-  background: linear-gradient(to bottom, green, rgb(156, 226, 85)60% );
+  background: linear-gradient(to bottom, #4A90E2, #4A9 );
 
   justify-content: center;
   gap: 40px;

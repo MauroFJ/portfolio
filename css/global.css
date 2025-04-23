@@ -9,6 +9,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #f4f4f4;
+  color: var(--cinza);
+}
+
 :root {
   --h1: 'Inter', sans-serif;
   --text: 'Poppins', sans-serif;

@@ -9,9 +9,11 @@
   & .subtitulo {
     display: flex;
     justify-content: center;
-    background: radial-gradient(circle,chartreuse ,rgba(255,255,255,0.2)70%);
+    /* background: linear-gradient(90deg,#4a90e2,#4a9 60%);
+    background-clip: text;
+    color: transparent; */
+    color: var(--cinza);
     font: 500 4rem var(--subtitulos);
-    color: var(--branco);
     padding: 1rem;
   }
 
@@ -28,7 +30,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: linear-gradient(90deg, chartreuse 40%, green);
+    background: linear-gradient(90deg, #4a9, #4a90e2);
     z-index: 2000;
     cursor: pointer;
   }
@@ -42,7 +44,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: linear-gradient(270deg, chartreuse 40%, green);
+    background: linear-gradient(90deg, #4a90e2, #4a9);
     z-index: 2000;
     cursor: pointer;
   }
@@ -66,14 +68,13 @@
       & .links {
         margin-top: 80px;
         padding: 20px;
-        background-color: chartreuse;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+        background: linear-gradient(210deg, #4a9, #4a90d2);
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .6);
         & a {
           color: aliceblue;
           padding: 20px;
           font-weight: bold;
-          text-shadow: 1px 1px 1px black;
           font-size: 24px;
         }
       }
@@ -108,13 +109,18 @@
     justify-content: center;
 
     & .btn {
-      background: linear-gradient(135deg, green,chartreuse 40%, green);
+      background: linear-gradient(135deg, #4a9,#4a90e2 10%, #4a9);
+      border: none;
       color: var(--branco);
-      text-shadow: 2px 1px 2px black;
       font-weight: bold;
       padding: 20px;
+      border-radius: 20px;
       font-size: 24px;
       cursor: pointer;
+    }
+    & .btn:hover {
+      background: linear-gradient(135deg, #4a90e2,#4a9 10%, #4a90e2);
+      scale: 1.1;
     }
   }
 
@@ -130,10 +136,6 @@
         width: 700px;
         height: 450px;
       }
-    }
-    & .subtitulo {
-      font-size: 2rem;
-    background: radial-gradient(circle,chartreuse ,rgba(255,255,255,0.2));
     }
   }
 }
@@ -152,6 +154,7 @@
 
 @media (max-width: 500px) {
   .projects {
+    margin-top: 50px;
     & .projetos {
       & iframe {
         width: 300px;
@@ -160,7 +163,7 @@
       & .projeto1, & .projeto2, & .projeto3 {
         & .links {
           margin-top: 40px;
-          padding: 10px;
+          padding: 20px 10px;
           & a {
             padding: 10px;
             font-size: 16px;
@@ -169,7 +172,7 @@
        }
     }
     & .subtitulo {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
     }
   }
 }

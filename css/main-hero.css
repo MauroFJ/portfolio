@@ -14,6 +14,9 @@
 
   & .tittle {
     & h1 {
+      background-image: linear-gradient(to right, #4A90E2, #4A9);
+      background-clip: text;
+      color: transparent;
       max-width: 700px;
       font-size: 6rem;
       margin-bottom: 1.5rem;
@@ -28,7 +31,7 @@
   }
 
   & .gradient {
-    background: linear-gradient(to bottom, rgb(156, 226, 85), #6D9FDA );
+    background: linear-gradient(135deg, #4A90E2, #6FB1FC);
     border-radius: 50%;
     padding: 10px;
   }
