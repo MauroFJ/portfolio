@@ -4,6 +4,8 @@
   align-items: center;
   padding: 60px 0;
   gap: 40px;
+  max-width: 2000px;
+  margin: auto;
 
 
   & img {

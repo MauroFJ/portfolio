@@ -6,6 +6,8 @@
   padding: 100px;
   position: relative;
   margin-top: 200px;
+  max-width: 2000px;
+  margin: auto;
 
   background-image: url(../assets/backgrounds/paisagem2.jpg);
   background-repeat: no-repeat;
